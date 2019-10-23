@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'Nombre: ' + ${user.name}" />
+    <p th:text="'Edad: ' + ${user.age}" />
+    <a href="/home">Submit another message</a>
+    
+    <ul>
+	        <li><button type="submit" name="button"> Actualizar</button></li>
+	        <li><button type="submit" name="button"> Borrar </button></li> 
+	<!--    <li><button type="button" name="button"> </button></li> -->  
+		</ul>
+</body>
+</html>
