@@ -31,6 +31,7 @@ public class MyController {
 	    @PostMapping("/home")
 	    public String getLogin(@ModelAttribute Ingreso ingreso) {
 	    	if(serviceApp.getAttribute(ingreso.getName(), ingreso.getPassword())) {
+	    		
 	    		return "result";
 	    	}else {
 	    		return "wrong";

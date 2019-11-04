@@ -17,6 +17,7 @@ public class MyService {
 		
 		if (getAttribute(name, password) != true) {
 			Base.setMap(name, password);
+			
 		}	
 
 	}

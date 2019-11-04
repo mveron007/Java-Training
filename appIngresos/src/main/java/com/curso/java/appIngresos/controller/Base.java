@@ -18,8 +18,16 @@ public class Base {
 	}
 	
 	public static void setMap(String name, String password) {
-		myMaps.put(name, password);
+			myMaps.put(name, password);
+		
 	}
+	
+//	public static void validatePassword(String password) {
+//		if(password > 5) {
+//			return password;
+//		}
+//		return password;
+//	}
 	
 	
 //	public static  void setMap(String name, String password){

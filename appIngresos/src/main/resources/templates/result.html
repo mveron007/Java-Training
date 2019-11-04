@@ -42,6 +42,12 @@
 </nav>
     
     <h1 th:text="'Felicitaciones ' + ${ingreso.name}"> </h1>
+    
+    
+	    <ul th:each="ingresos: ${ingreso}">
+	        <li> <h3 th:text="${ingresos.name}"></h3> <li/>
+	    </ul>
+
 
     <a href="/home">Ir al home</a>
 
