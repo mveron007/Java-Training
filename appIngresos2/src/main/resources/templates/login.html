@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="center" style="width:500px; background-color:#f44336">
+		<h1 style="color=white;">Register</h1>
+	    <form action="#" th:action="@{/login}" th:object="${ingreso}" method="post">
+	    	<p>Nombre: <input type="text" th:field="*{name}" /></p>
+        <p>Apellido: <input type="text" th:field="*{lastName}" /></p>
+      	<p>Email: <input type="email" th:field="*{email}" /></p>
+	       <p>Contraseña: <input type="text" th:field="*{password}" /></p>
+	       <p><input class="btn waves-effect waves-light" type="submit" value="Submit" /> </p>
+	    </form>
+    </div>
+</body>
+</html>

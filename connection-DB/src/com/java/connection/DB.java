@@ -17,7 +17,7 @@ public class DB {
 	public static Connection conectar() {
 		Connection connection_=null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection_ = DriverManager.getConnection(url_, login_, password_);
 			System.out.println("OK");
 //			if (connection_ != null) {
