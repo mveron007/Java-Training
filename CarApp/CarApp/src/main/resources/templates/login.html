@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Ingresar auto</h1>
+
+    <form action="#" th:action="@{/login}" th:object="${vehiculo}" method="post">
+    	<p>Marca: <input type="text" th:field="*{brand}" /></p>
+    	<p>Modelo: <input type="text" th:field="*{name}" /></p>
+        <p>Año: <input type="text" th:field="*{age}" /></p>
+        <p><input type="submit" value="Submit" /> </p>
+    </form>
+</body>
+</html>
