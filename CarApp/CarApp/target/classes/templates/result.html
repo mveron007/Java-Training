@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+
+</head>
+<body>
+
+    
+    
+    
+    	<tbody>
+		    <tr th:each="vehiculos: ${vehiculo}">
+		        <td  th:text="${vehiculos.brand}"/>
+		    	<td  th:text="${vehiculos.name}"/>
+		  	    <td  th:text="${vehiculos.age}"/>  
+		    </tr>
+		<tbody>
+	
+    
+    <a href="/home">Ir al home</a>
+
+
+</body>
+</html>
