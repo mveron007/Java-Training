@@ -1,14 +1,16 @@
 package com.practice.java.CarApp.controller;
 
 public class Auto {
+	private String brand;
 	private String name;
-	private String age;
+	private double price;
+
 	
-	
-	public Auto(String name, String age) {
-		super();
+	public Auto( String name, String brand, double price) {
+		this.brand = brand;
 		this.name = name;
-		this.age = age;
+		this.price = price;
+		
 	}
 	public String getName() {
 		return name;
@@ -17,12 +19,19 @@ public class Auto {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
-		return age;
+	public String getBrand() {
+		return brand;
 	}
-	public void setAge(String age) {
-		this.age = age;
+	public double getPrice() {
+		return price;
 	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
 	
 	
 

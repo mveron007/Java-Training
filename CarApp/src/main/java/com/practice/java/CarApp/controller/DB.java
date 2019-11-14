@@ -10,10 +10,10 @@ public class DB {
 	
 	
 	static {
-		Auto vehiculo=new Auto("Gol", "2010");
+//		Auto vehiculo=new Auto("Gol", "2010");
 		carShop=new HashMap<String, Auto>();
 		
-		carShop.put("Volkswagen", vehiculo);
+//		carShop.put("Volkswagen", vehiculo);
 	}
 	
 

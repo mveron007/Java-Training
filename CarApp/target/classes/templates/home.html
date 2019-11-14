@@ -15,8 +15,9 @@
     <h1 class="center">Busqueda de auto</h1>
 
     <form action="#" th:action="@{/home}" th:object="${vehiculo}" method="post"  class="center">
-    	<p>Nombre: <input type="text" th:field="*{name}" /></p>
-        <p>Año: <input type="text" th:field="*{age}" /></p>
+    	<p>Marca: <input type="text" th:field="*{name}" /></p>
+        <p>Modelo: <input type="text" th:field="*{brand}" /></p>
+        <p>Precio: <input type="text" th:field="*{price}" /></p>
        <!--  <p><input type="submit" value="Login" /> </p> -->
 		
 		 <button class="btn-floating waves-effect waves-light" type="submit" name="action">
