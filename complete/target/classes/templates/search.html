@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Aerolineas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main role="main" class="container">
+	<form th:action="@{/search}" th:object="${country}" method="post" >
+            <input class="field" type="text" th:field="*{region}" placeholder="Ingrese el continente">
+            <input class="btn submit" type="submit" value="Buscar">
+    </form>
+</main>
+
+
+
+
+<a href="/greeting">Submit another message</a>
+</body>
+</html>

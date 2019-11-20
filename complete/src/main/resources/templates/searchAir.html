@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Busqueda de Aircraft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main role="main" class="container">
+	<form th:action="@{/searchAir}" th:object="${flights}" method="post" >
+            Hora inicial: <input  type="text" th:field="*{arrive_time1}" placeholder="hs:ms:sg" >
+            Hora final: <input  type="text" th:field="*{arrive_time2}" placeholder="hs:ms:sg">
+            <input class="btn submit" type="submit" value="Buscar">
+    </form>
+</main>
+
+
+
+
+<a href="/greeting">Submit another message</a>
+</body>
+</html>

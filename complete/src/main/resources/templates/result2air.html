@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Países</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+<h1>Listado de Vuelos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Aircraft</th>
+        <!-- <th>Codigo de Pais</th>
+        <th>Continente</th>  -->
+        
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="air: ${aircrafts}">
+        <td><span th:text="${air.aircraft}"> Title </span></td>
+        <!-- <td><span th:text="${air.codigo}"> Title </span></td>
+        <td><span th:text="${air.region}"> Title </span></td> -->
+        <!-- <td><span th:text="${coun.basicRate}"> Title </span></td> -->
+        
+
+
+    </tr>
+    </tbody>
+</table>
+    </div>
+</main>
+
+
+
+
+<a href="/greeting">Submit another message</a>
+</body>
+</html>
