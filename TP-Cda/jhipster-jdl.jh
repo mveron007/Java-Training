@@ -81,7 +81,7 @@ enum Language {
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
 	Model{idModel} to Computer{model}
-    Inventary{idUser} to Users{inventary}
+    Users{idInventary} to Inventary{users}
     Headquarters{idheadquarters} to Country{headquarters}
     Inventary{idinventary} to Headquarters{inventary}
 	Computer{serialnumber} to Inventary{computer}
