@@ -1,0 +1,107 @@
+
+entity Computer {
+	serialNumber Long required,
+//    idModel Long,
+    assured String,
+    type String,
+    state State
+}
+
+entity OS{
+	idOs Long,
+    nameOs String
+}
+
+entity Model {
+	idModel Long,
+    name String
+}
+
+enum State {
+	Activo,
+    Baja,
+    Prestamo,
+    Deposito
+    
+}
+
+entity Role {
+	idRole Long,
+    roleName String
+}
+
+entity Users {
+	idUser Long,
+    idResponsable Long,
+    userName String,
+    userSurname String,
+    idRole Long required,
+    dni Long required
+}
+
+entity Maker {
+	idMaker Long,
+    name String
+}
+
+entity Inventary {
+	idInventary Long,
+    language Language,
+    comment String,
+    guarantee String,
+    modifiedAt Instant
+}
+
+entity Country {
+	countryCode Long,
+    countryName String
+}
+
+entity Headquarters {
+	idHeadquarters Long,
+    adress String,
+    floor Long,
+    countryCode Long required
+}
+
+//Separation
+
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+
+
+//relationship ManyToMany {
+	
+//}
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Model{idModel} to Computer{model}
+    Inventary{idUser} to Users{inventary}
+    Headquarters{idheadquarters} to Country{headquarters}
+    Inventary{idinventary} to Headquarters{inventary}
+	Computer{serialnumber} to Inventary{computer}
+    OS{serialnumber} to Computer{os}
+	Role{idUser} to Users{role}
+}
+
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	Maker{fabricante} to Model
+}
+
+// Set pagination options
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
