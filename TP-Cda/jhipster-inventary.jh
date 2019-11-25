@@ -1,0 +1,117 @@
+
+entity Computer {
+	serialNumber Long required,
+    idModel Long,
+    assured String,
+    guarantee String,
+    type String,
+    oS String,
+    comment String,
+    modificationDate Instant
+}
+
+entity Model {
+	idModel Long,
+    idMaker Long,
+    name String
+}
+
+enum State {
+	Activo,
+    Baja,
+    Prestamo,
+    Deposito
+    
+}
+
+entity Role {
+	idRole Long,
+    roleName String
+}
+
+entity Users {
+	idUser Long,
+    userName String,
+    userSurname String,
+    idRole Long required,
+    dni Long required
+}
+
+entity Maker {
+	idMaker Long,
+    name String
+}
+
+//entity ModifiedComputer{
+//	idUser Long,
+//    serialNumber Long required,
+//    comment String,
+//    modificationDate Instant
+//}
+
+entity UserComputer {
+	idUser Long,
+    serialNumber Long,
+    idHeadquarters Long,
+    floor Long
+}
+
+entity Country {
+	countryCode Long,
+    countryName String
+}
+
+entity Headquarters {
+	idHeadquarters Long,
+    adress String,
+    countryCode Long required
+}
+
+//Separation
+
+
+
+//enum Language {
+//    FRENCH, ENGLISH, SPANISH
+//}
+
+
+
+
+//relationship ManyToMany {
+	
+//}
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    //User{modifiedcomputer} to ModifiedComputer
+    Model{computer} to Computer,
+    Maker{model} to Model,
+//    Maker{computer} to Computer,
+    Users{usercomputer} to UserComputer
+    Country{headquarters} to Headquarters,
+    Headquarters{usercomputer} to UserComputer
+    Computer{state} to State
+	Computer{usercomputer} to UserComputer
+	Role{user} to Users
+}
+
+
+// defining multiple oneToOne relationships
+//relationship OneToOne {
+	
+    
+    
+    
+//}
+
+// Set pagination options
+
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
