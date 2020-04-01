@@ -8,6 +8,4 @@ import com.cdainfo.dominio.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
-    Employee findByEmployee(Long id);
-
 }
